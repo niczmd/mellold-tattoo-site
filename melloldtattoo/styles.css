@@ -59,7 +59,7 @@ a { color:inherit; text-decoration:none; }
 .fake-tattoo { font-size:8rem; color:#ddd; filter:grayscale(1); opacity:.7; position:relative; }
 .rose { font-size:9rem; }.face{font-size:7rem}.compass{font-size:8rem}.owl{font-size:7rem}.snake{font-size:10rem}
 .tattoo-card span { position:absolute; left:12px; bottom:10px; background:#000b; padding:4px 9px; color:#aaa; font-size:.65rem; text-transform:uppercase; }
-.gallery-btn { margin-top:35px; }
+.gallery-btn { margin-top:35px; color: #aaa;}
 .contact { min-height:400px; display:flex; justify-content:space-between; align-items:center; background:linear-gradient(100deg,#0b0b0b 55%,#140506); }
 .contact h2 { font-size:clamp(3rem,6vw,5.5rem); }
 .contact > div:first-child > p:not(.eyebrow) { color:#aaa; margin:18px 0; }
