@@ -1,2 +1,3 @@
-# tests
-this repository is created for test
+# Mellold Tattoo Site
+
+Site com foco em mostrar ao cliente o serviço oferecido
