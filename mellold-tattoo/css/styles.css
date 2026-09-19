@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap');
+
+:root {
+  --black: #080808;
+  --dark: #101010;
+  --red: #d20b18;
+  --red-light: #ff2938;
+  --white: #f2f0ec;
+  --muted: #969696;
+  --line: #2a2a2a;
+}
+
+* { box-sizing: border-box; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 90px; 
+}
+
+body { 
+  background: var(--black); 
+  color: var(--white); 
+  font-family: Inter, sans-serif; 
+}
+
+.custom-navbar { 
+  background: rgba(8,8,8,.9); 
+  backdrop-filter: blur(14px); 
+}
+
+.brand { 
+  font-family: 'Permanent Marker', cursive; 
+  font-size: 1.35rem; 
+  line-height: .8; 
+  transform: rotate(-3deg); 
+}
+
+.brand span { 
+  display: block; 
+  color: var(--red-light); 
+  margin-left: 18px; 
+}
+
+.nav-link { 
+  font-size: .75rem; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+}
+
+.nav-link:hover { 
+  color: var(--red-light); 
+}
+
+.btn-danger { 
+  background: var(--red); 
+  border-color: var(--red); 
+}
+
+.btn-danger:hover { 
+  background: var(--red-light); 
+  border-color: var(--red-light); 
+}
+
+.hero-section { 
+  min-height: 100vh; 
+  position: relative; 
+  overflow: hidden; 
+  background: radial-gradient(circle at 80% 40%, #292929, #0c0c0c 38%, #050505 75%); 
+}
+
+.hero-section::after { 
+  content: ''; 
+  position: absolute; 
+  inset: 0 0 0 50%; 
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,.2)), url('../assets/images/hero.jpg') center/cover; 
+  opacity: .45; 
+  mix-blend-mode: screen; 
+  pointer-events: none; 
+}
+
+.hero-content { 
+  position: relative; 
+  z-index: 1; 
+  padding-top: 90px; 
+}
+
+.eyebrow { 
+  color: var(--red-light); 
+  font-size: .7rem; 
+  font-weight: 800; 
+  letter-spacing: 2px; 
+}
+
+.hero-section h1 { 
+  font-family: 'Bebas Neue', sans-serif; 
+  font-size: clamp(4rem, 7vw, 7.5rem); 
+  line-height: .88; 
+  letter-spacing: 1px; 
+}
+
+h2 { font-family: 'Bebas Neue', sans-serif; 
+  font-size: clamp(3rem, 5vw, 5rem); 
+  line-height: .9; 
+  letter-spacing: 1px; 
+}
+
+h1 span, h2 span { 
+  color: var(--red-light); 
+}
+
+#mainNavbar {
+    background: transparent !important;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+#mainNavbar.scrolled {
+    background: rgba(8, 8, 8, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+.hero-description, .section-text { 
+  color: #aaa; 
+  max-width: 540px; 
+}
+
+.hero-details { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 24px; 
+  color: #888; 
+  font-size: .72rem; 
+}
+
+.hero-details i, .contact-links i { 
+  color: var(--red-light); 
+}
+
+.section-padding { 
+  padding: 110px 0; 
+}
+
+.link-style { 
+  color: #bbb; font-size: .85rem; 
+}
+
+.link-style:hover { 
+  color: var(--red-light); font-size: .85rem; 
+}
+
+.dark-section { 
+  background: var(--dark); 
+}
+
+.feature-row { 
+  border-top: 1px solid var(--line); 
+}
+
+.feature-card { 
+  padding: 28px; 
+  border-right: 1px solid var(--line); 
+}
+
+.feature-card:last-child { 
+  border-right: 0; 
+}
+
+.feature-card span, .style-card > span { 
+  color: var(--red-light); 
+  font-size: .7rem; 
+  font-weight: 800; 
+}
+
+.feature-card h3 { 
+  font-size: 1.1rem; 
+  margin-top: 18px; 
+}
+
+.feature-card p, .style-card p { 
+  color: #777; 
+  font-size: .8rem; 
+}
+
+.text-link { 
+  color: white; 
+  font-size: .75rem; 
+  font-weight: 800; 
+  text-transform: uppercase; 
+  border-bottom: 1px solid var(--red); 
+  padding-bottom: 7px; 
+}
+
+.style-card { 
+  position: relative; 
+  min-height: 250px; 
+  padding: 28px; 
+  background: #111; 
+  border: 1px solid var(--line); 
+  transition: .25s; 
+}
+
+.style-card:hover { 
+  transform: translateY(-5px); 
+  border-color: var(--red); 
+}
+
+.style-card h3 { 
+  font-family: 'Bebas Neue'; 
+  font-size: 2.4rem; 
+  margin-top: 42px; 
+}
+
+.style-card strong { 
+  position: absolute; 
+  right: 25px; 
+  bottom: 22px; 
+  color: var(--red-light); 
+}
+
+.filter-button { 
+  border-radius: 0; 
+  font-size: .65rem; 
+  font-weight: 800; 
+  text-transform: uppercase; 
+}
+
+.gallery-card { 
+  width: 100%; 
+  height: 100%; 
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background: linear-gradient(145deg,#292929,#080808); 
+  border: 1px solid var(--line); 
+  overflow: hidden; 
+}
+
+.gallery-card img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.gallery-card::before { 
+  display: none; 
+  content: ''; 
+  position: absolute; 
+  width: 65%; 
+  height: 65%; 
+  border: 1px solid #666; 
+  border-radius: 50%; 
+  transform: rotate(25deg); 
+  opacity: .4; 
+}
+
+.gallery-symbol { 
+  position: relative; 
+  font-size: 9rem; 
+  color: #ddd; 
+  opacity: .65; 
+}
+
+.gallery-card span { 
+  position: absolute; 
+  left: 14px; 
+  bottom: 14px; 
+  padding: 4px 9px; 
+  background: #000c; 
+  color: #aaa; 
+  font-size: .65rem; 
+  text-transform: uppercase; 
+}
+
+.gallery-item.hidden { 
+  display: none; 
+}
+
+.contact-section { 
+  background: linear-gradient(110deg,#0b0b0b,#170607); 
+}
+
+.contact-links { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px; 
+  align-items: flex-start; 
+  width: 100%; 
+}
+
+.contact-links a, .contact-links span { 
+  color: #bbb; 
+  font-size: .85rem; 
+}
+
+.contact-links a:hover {
+  color: var(--red-light); 
+}
+
+.contact-form { 
+  background: #111; 
+  padding: 30px; 
+  border: 1px solid var(--line); 
+}
+
+.contact-form label { 
+  display: block; 
+  color: #aaa; 
+  font-size: .75rem; 
+  font-weight: 700; 
+  margin-top: 12px; 
+  margin-bottom: 7px; 
+}
+
+.contact-form .form-control, .contact-form .form-select { 
+  border-radius: 0; 
+  background: #080808; 
+  border-color: #333; 
+  color: white; 
+}
+
+.contact-form .form-control:focus, .contact-form .form-select:focus { 
+  border-color: var(--red);
+  box-shadow: 0 0 0 .2rem rgba(210,11,24,.15); 
+}
+
+@media (max-width: 991px) { 
+  .hero-section::after { 
+    inset: 0; opacity: .2; 
+  } 
+
+  .feature-card { 
+    border-right: 0; 
+    border-bottom: 1px solid var(--line); 
+  } 
+}
+
+@media (max-width: 575px) {
+
+    /* CONFIGURAÇÕES GERAIS */
+
+    .section-padding {
+        padding: 75px 22px;
+    }
+
+
+    /* HEADER / HERO */
+
+    .hero-section .row {
+        justify-content: center;
+    }
+
+    .hero-section [class*="col-"] {
+        text-align: center;
+    }
+
+    .hero-section .text-start {
+        text-align: center !important;
+    }
+
+    .hero-section h1,
+    .hero-section h2 {
+        width: 100%;
+        text-align: justify !important;
+        text-align-last: center;
+    }
+
+    .hero-section p {
+        width: 100%;
+        text-align: justify;
+        text-align-last: center;
+    }
+
+    .hero-content .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* DESTAQUES DO HERO */
+
+    .hero-details {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center !important;
+        align-items: center;
+        gap: 12px 20px;
+        text-align: center;
+    }
+
+    .hero-details span {
+        text-align: center;
+    }
+
+
+    /* TÍTULOS DAS SEÇÕES */
+
+    section h2 {
+        width: 100%;
+        text-align: justify !important;
+        text-align-last: center;
+    }
+
+    section h3 {
+        text-align: center;
+    }
+
+    section p {
+        text-align: justify;
+        text-align-last: center;
+    }
+
+
+    /* PORTFÓLIO */
+
+    #portfolio h2,
+    .portfolio-section h2 {
+        width: 100%;
+        text-align: justify !important;
+        text-align-last: center;
+    }
+
+    #portfolio .eyebrow,
+    .portfolio-section .eyebrow {
+        text-align: center;
+    }
+
+    #portfolio .gallery-filters,
+    .portfolio-section .gallery-filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+
+    /* CARDS DE ESTILOS */
+
+    .style-card {
+        text-align: center;
+    }
+
+    .style-card h3 {
+        text-align: center;
+    }
+
+    .style-card p {
+        text-align: center;
+    }
+
+
+    /* GALERIA */
+
+    .gallery-card {
+        height: 230px;
+    }
+
+    .gallery-symbol {
+        font-size: 6rem;
+    }
+
+
+    /* CONTATO */
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .contact-links {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .contact-links a {
+        display: flex;
+        max-width: 100%;
+        min-width: 0;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .contact-links a i {
+        flex-shrink: 0;
+    }
+
+
+    /* FOOTER */
+
+    footer .container {
+        text-align: center;
+        justify-content: center !important;
+    }
+
+}
