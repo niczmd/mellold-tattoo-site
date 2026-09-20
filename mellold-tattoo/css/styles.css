@@ -340,17 +340,29 @@ h1 span, h2 span {
     /* CONFIGURAÇÕES GERAIS */
 
     .section-padding {
-        padding: 75px 22px;
+        padding: 70px 22px;
+    }
+
+    section .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
 
 
     /* HEADER / HERO */
+
+    .hero-section {
+        padding: 0 22px 70px;
+    }
 
     .hero-section .row {
         justify-content: center;
     }
 
     .hero-section [class*="col-"] {
+        width: 100%;
         text-align: center;
     }
 
@@ -358,20 +370,56 @@ h1 span, h2 span {
         text-align: center !important;
     }
 
-    .hero-section h1,
-    .hero-section h2 {
+    .hero-content {
         width: 100%;
-        text-align: justify !important;
-        text-align-last: center;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
-    .hero-section p {
-        width: 100%;
+    .eyebrow {
         text-align: justify;
         text-align-last: center;
     }
+    p.eyebrow {
+        font-size: 0.75rem !important;
+    }
+
+    /* TÍTULO DO HERO */
+
+    .hero-title {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 24px;
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    text-align: left !important;
+    }
+
+    .hero-title > span {
+        display: block;
+        width: 100%;
+        text-align: left !important;
+    }
+
+    .hero-title > span:nth-child(2) {
+        color: var(--red-light);
+    }
+
+    /* PARÁGRAFO DO HERO */
+
+    .hero-content p {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 25px;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        text-align: left !important;
+    }
 
     .hero-content .btn {
+        display: block;
+        width: fit-content;
         margin-left: auto;
         margin-right: auto;
     }
@@ -382,15 +430,15 @@ h1 span, h2 span {
     .hero-details {
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: center !important;
-        align-items: center;
-        gap: 12px 20px;
-        text-align: center;
+        align-items: justify;
+        gap: 22px;
+        margin-top: 28px !important;
     }
 
     .hero-details span {
-        text-align: center;
+        font-size: 0.85rem;
     }
 
 
@@ -398,17 +446,25 @@ h1 span, h2 span {
 
     section h2 {
         width: 100%;
-        text-align: justify !important;
-        text-align-last: center;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center !important;
+        line-height: 1.2;
     }
 
     section h3 {
         text-align: center;
+        line-height: 1.3;
     }
 
     section p {
-        text-align: justify;
-        text-align-last: center;
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.7;
+        text-align: left;
     }
 
 
@@ -417,8 +473,8 @@ h1 span, h2 span {
     #portfolio h2,
     .portfolio-section h2 {
         width: 100%;
-        text-align: justify !important;
-        text-align-last: center;
+        max-width: 100%;
+        text-align: center !important;
     }
 
     #portfolio .eyebrow,
@@ -431,6 +487,7 @@ h1 span, h2 span {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         gap: 8px;
     }
 
@@ -438,15 +495,18 @@ h1 span, h2 span {
     /* CARDS DE ESTILOS */
 
     .style-card {
+        height: 100%;
         text-align: center;
     }
 
     .style-card h3 {
         text-align: center;
+        line-height: 1.3;
     }
 
     .style-card p {
         text-align: center;
+        line-height: 1.6;
     }
 
 
@@ -468,21 +528,28 @@ h1 span, h2 span {
     }
 
     .contact-links {
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
         width: 100%;
+        gap: 12px;
     }
 
     .contact-links a {
-        display: flex;
+        display: inline-flex;
+        align-items: flex-start;
         max-width: 100%;
         min-width: 0;
         white-space: normal;
         overflow-wrap: anywhere;
         word-break: break-word;
+        line-height: 1.5;
     }
 
     .contact-links a i {
         flex-shrink: 0;
+        margin-top: 3px;
+        margin-right: 8px;
     }
 
 
@@ -493,4 +560,7 @@ h1 span, h2 span {
         justify-content: center !important;
     }
 
+    .desktop-break {
+    display: none;
+}
 }
