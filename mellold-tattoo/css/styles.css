@@ -73,7 +73,7 @@ body {
   content: ''; 
   position: absolute; 
   inset: 0 0 0 50%; 
-  background: linear-gradient(90deg, transparent, rgba(0,0,0,.2)), url('../assets/images/hero.jpg') center/cover; 
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,.2)), url('../assets/images/hero.jpeg') center/cover; 
   opacity: .45; 
   mix-blend-mode: screen; 
   pointer-events: none; 
@@ -374,6 +374,7 @@ h1 span, h2 span {
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
+        text-align: center;
     }
 
     .eyebrow {
@@ -394,6 +395,10 @@ h1 span, h2 span {
     line-height: 1.1;
     letter-spacing: -0.5px;
     text-align: left !important;
+    }
+
+    h2.hero-title {
+        font-size: 3.5rem;
     }
 
     .hero-title > span {
