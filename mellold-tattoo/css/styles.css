@@ -334,7 +334,6 @@ h1 span, h2 span {
     border-bottom: 1px solid var(--line); 
   } 
 }
-
 @media (max-width: 575px) {
 
     /* CONFIGURAÇÕES GERAIS */
@@ -425,7 +424,7 @@ h1 span, h2 span {
     }
 
 
-    /* PARÁGRAFOS DO HERO */
+    /* PARÁGRAFO DO HERO */
 
     .hero-content p {
         width: 100%;
@@ -472,9 +471,23 @@ h1 span, h2 span {
         max-width: 100%;
         margin: 0 auto 20px;
         padding: 0;
-        text-align: center !important;
-        text-align-last: center !important;
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        font-weight: inherit;
         line-height: 1.2;
+        letter-spacing: normal;
+        word-spacing: normal;
+        white-space: normal;
+        text-align: center !important;
+        text-align-last: auto !important;
+    }
+
+    section h2 span {
+        display: inline;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        text-align: center !important;
+        word-spacing: normal !important;
     }
 
     section h3 {
@@ -506,7 +519,7 @@ h1 span, h2 span {
         margin-left: auto;
         margin-right: auto;
         text-align: center !important;
-        text-align-last: center !important;
+        text-align-last: auto !important;
     }
 
     #portfolio .eyebrow,
