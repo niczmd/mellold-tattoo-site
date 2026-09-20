@@ -398,29 +398,35 @@ h1 span, h2 span {
     /* TÍTULO DO HERO */
 
     .hero-title {
-        width: fit-content;
-        max-width: 100%;
-        margin: 0 auto 24px;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 24px !important;
         font-size: clamp(2rem, 9vw, 3rem);
         line-height: 1.1;
         letter-spacing: -0.5px;
-        text-align: left !important;
+        text-align: center !important;
     }
 
     h2.hero-title {
         font-size: 3.5rem;
+        text-align: center !important;
     }
 
     .hero-title > span {
-        display: block;
-        width: 100%;
+        display: inline !important;
+        width: auto !important;
         margin: 0 !important;
         padding: 0 !important;
-        text-align: left !important;
+        text-align: center !important;
     }
 
     .hero-title > span:nth-child(2) {
         color: var(--red-light);
+    }
+
+    .desktop-break {
+        display: none !important;
     }
 
 
@@ -465,29 +471,27 @@ h1 span, h2 span {
 
     /* TÍTULOS DAS SEÇÕES */
 
-    section h2 {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto 20px;
-        padding: 0;
+    section h2:not(.hero-title) {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 20px !important;
+        padding: 0 !important;
         font-size: clamp(1.8rem, 7vw, 2.5rem);
-        font-weight: inherit;
         line-height: 1.2;
-        letter-spacing: normal;
-        word-spacing: normal;
+        letter-spacing: normal !important;
+        word-spacing: normal !important;
         white-space: normal;
         text-align: center !important;
-        text-align-last: auto !important;
+        text-align-last: center !important;
     }
 
-    section h2 span {
-        display: inline;
-        width: auto;
-        margin: 0;
-        padding: 0;
-        text-align: center !important;
-        word-spacing: normal !important;
+    section h2:not(.hero-title) span {
+        display: inline !important;
+        width: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: inherit !important;
     }
 
     section h3 {
@@ -514,12 +518,22 @@ h1 span, h2 span {
 
     #portfolio h2,
     .portfolio-section h2 {
-        width: 100%;
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 20px !important;
+        padding: 0 !important;
         text-align: center !important;
-        text-align-last: auto !important;
+        text-align-last: center !important;
+    }
+
+    #portfolio h2 span,
+    .portfolio-section h2 span {
+        display: inline !important;
+        width: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: inherit !important;
     }
 
     #portfolio .eyebrow,
@@ -605,13 +619,6 @@ h1 span, h2 span {
     footer .container {
         text-align: center;
         justify-content: center !important;
-    }
-
-
-    /* QUEBRA DE LINHA DO DESKTOP */
-
-    .desktop-break {
-        display: none;
     }
 
 }
